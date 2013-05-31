@@ -1,6 +1,3 @@
-'''
-Filepicker.io button view and upload handler
-'''
 import json
 import logging
 
@@ -16,9 +13,6 @@ logger = logging.getLogger(__name__)
 
 
 def authorize(request):
-    '''
-    renders the filepicker button/widget via an ajax call
-    '''
 
     # c = Context({'authorization_code': authorization_code,
     #              })
