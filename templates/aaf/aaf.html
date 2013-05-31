@@ -1,0 +1,14 @@
+{% extends "tardis_portal/index.html" %}
+{% block content %}
+	<p>
+	Hello :D
+	{{authorization_code}}
+	{{state}}
+	</p>
+
+	<p>
+	<a href="https://bdp-aaf-dev.dyndns.org/oauth-aaf/authorize.php?response_type=code&client_id=mytardis-bdp&state=Kx78fqNl0F">Log in via AAF</a>
+	</p>
+
+	{{ block.super }}
+{% endblock %}
