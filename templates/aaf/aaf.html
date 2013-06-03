@@ -1,19 +1,9 @@
 {% extends "tardis_portal/index.html" %}
 {% block content %}
-	<p>
-	Hello.
-	</p>
-    
-    {% if response %}
-        <p>
-            <strong>Your response:</strong><br/>
-            {{response|safe}}
-        </p>
-    {% endif %}
-        <p>
-        <a href="https://bdp-aaf-dev.dyndns.org/oauth-aaf/authorize.php?response_type=code&client_id=test-mytardis-melb-86-15&state=Kx78fqNl0F">Log in via AAF</a>
-        </p>
-    
+
+    <p>
+    Hi {{first_name}}.
+    </p>
 
 	{{ block.super }}
 {% endblock %}

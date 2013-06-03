@@ -5,9 +5,12 @@ from tardis.tardis_portal.auth.authservice import AuthService
 auth_key = 'aaf'
 
 
-def authenticate(username):
+def authenticate(username, first_name, last_name, email):
     #todo take attr array
-    user_dict = {'id': username}
+    user_dict = {'id': username,
+                 'first_name': first_name,
+                 'last_name': last_name or '(none)',
+                 'email': email}
 
     auth_service = AuthService()
     user = auth_service._get_or_create_user_from_dict(

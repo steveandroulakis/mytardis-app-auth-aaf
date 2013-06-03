@@ -1,0 +1,13 @@
+{% extends "tardis_portal:tardis_portal/login.html" %}
+{% load bootstrap %}
+
+{% block content %}
+
+        <legend>Please Log In</legend>
+        <p>The Australian Access Federation allows you to log in with your regular univeristy username and password.</p>
+        
+        <p>
+        <a class="btn btn-primary" href="https://bdp-aaf-dev.dyndns.org/oauth-aaf/authorize.php?response_type=code&client_id=test-mytardis-melb-86-15&state=Kx78fqNl0F"><i class="icon-signin"></i> Log in via AAF</a>
+        </p>
+
+{% endblock %}
