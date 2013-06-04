@@ -28,4 +28,4 @@ AAF_OAUTH2_AUTHORIZE_URL = 'https://my-oauth2-server/oauth-aaf/authorize.php'
 AAF_OAUTH2_CLIENT_ID = 'my-oauth2-client-id'
 
 # url used to retrieve user credentials from auth server using auth code
-AAF_OAUTH2_CODE_URL = 'http://bdp-aaf-dev.dyndns.org/code.php'
+AAF_OAUTH2_CODE_URL = 'http://my-oauth2-server/code.php'
