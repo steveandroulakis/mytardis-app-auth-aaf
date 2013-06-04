@@ -15,12 +15,17 @@ This is made to work with a custom server (yet to be released) that's composed o
 Example: `/opt/mytardis/current/tardis/apps/aaf/..`
 
 Add to tardis/settings.py
-```
+```python
 INSTALLED_APPS = ("tardis.apps.aaf",) + INSTALLED_APPS
 
+# For both localdb and aaf auth.
 AUTH_PROVIDERS = (
     ('localdb', 'Local DB', 'tardis.tardis_portal.auth.localdb_auth.DjangoAuthBackend'),
     ('aaf', 'Australian Access Federation', 'tardis.apps.aaf.auth.aaf_auth.DjangoAuthBackend'),
 )
 
-.. for both localdb and aaf auth.
+AAF_OAUTH2_AUTHORIZE_URL = 'https://my-oauth2-server/oauth-aaf/authorize.php'
+AAF_OAUTH2_CLIENT_ID = 'my-oauth2-client-id'
+
+# url used to retrieve user credentials from auth server using auth code
+AAF_OAUTH2_CODE_URL = 'http://bdp-aaf-dev.dyndns.org/code.php'

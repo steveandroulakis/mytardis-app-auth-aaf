@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 def authorize(request):
 
     # TODO real state randomly generated, URL in settings
-    url = 'http://bdp-aaf-dev.dyndns.org/oauth-aaf-insecure/code.php'
+    url = aaf_settings.AAF_OAUTH2_CODE_URL
     code = ''
     state = ''
 
