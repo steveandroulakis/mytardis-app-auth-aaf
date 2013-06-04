@@ -27,3 +27,7 @@ def request_aaf_info(url, code, state):
     response = urllib2.urlopen(full_url)
     aaf_attr_json = response.read()
     return aaf_attr_json
+
+
+def get_username_from_aaf_email(mail):
+    return '__'.join(mail.split("@"))

@@ -7,7 +7,8 @@ from django.template import Context
 from tardis.tardis_portal.shortcuts import render_response_index,\
     return_response_error
 import tardis.apps.aaf.aaf_settings as aaf_settings
-from tardis.apps.aaf.utils import authenticate, request_aaf_info
+from tardis.apps.aaf.utils import authenticate, request_aaf_info,\
+    get_username_from_aaf_email
 from django.contrib.auth import login
 
 logger = logging.getLogger(__name__)
@@ -45,7 +46,7 @@ def authorize(request):
     if 'mail' not in response_dict or 'cn' not in response_dict:
         return return_response_error(request)
 
-    username = '__'.join(response_dict['mail'].split("@"))
+    username = get_username_from_aaf_email(response_dict['mail'])
     first_name = response_dict['cn'].split(" ")[:1][0]
     last_name = ' '.join(response_dict['cn'].split(" ")[1:])
     mail = response_dict['mail']
