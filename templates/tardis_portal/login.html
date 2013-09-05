@@ -5,7 +5,7 @@
 {% block content %}
 
         <legend>Please Log In</legend>
-        <p>The Australian Access Federation allows you to log in with your regular univeristy username and password.</p>
+        <p>The Australian Access Federation allows you to log in with your regular university username and password.</p>
         
         <p>
         <a class="btn btn-primary" href="{% aaf_oauth2_authorize_url %}?response_type=code&client_id={% aaf_oauth2_client_id %}&state={% random_oauth_state %}"><i class="icon-signin"></i> Log in via AAF</a>
